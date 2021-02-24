@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  <form>
+
+    <div class="form-group">
+      <label for="exampleName">FirstName</label>
+      <input type="text" class="form-control" id="exampleName" placeholder="Enter FirstName">
+    </div>
+    <div class="form-group">
+      <label for="exampleName">LastName</label>
+      <input type="text" class="form-control" id="exampleName" placeholder="Enter LastName">
+    </div>
+    <div class="form-group">
+      <label for="exampleAge">Age</label>
+      <input type="number" class="form-control" id="exampleAge" min="0" max="99" placeholder="Age">
+      <small id="agehelp" class="form-text text-muted">We'll never share your details with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleGender">Gender</label><br>
+      <input type="radio" class="form-control" id="male">
+      <label for="male">Male</label><br>
+      <input type="radio" class="form-control" id="female">
+      <label for="female">Female</label><br>
+      <input type="radio" class="form-control" id="other">
+      <label for="other">Other</label><br>
+    </div>
+    <div class="form-group">
+      <label for="examplePermanentAddress">Permanent Address</label>
+      <textarea type="text" class="form-control" id="exampleAddress" aria-describedby="address"
+        placeholder="Enter Address"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleCurrentAddress">Current Address</label>
+      <textarea type="text" class="form-control" id="exampleAddress" aria-describedby="address"
+        placeholder="Enter Address"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleGender">Location type</label><br>
+      <input type="radio" class="form-control" id="urban">
+      <label for="urban">Urban</label><br>
+      <input type="radio" class="form-control" id="rural">
+      <label for="rural">Rural</label><br>
+      <input type="radio" class="form-control" id="sub-urban">
+      <label for="suburban">Sub-urban</label><br>
+    </div>
+    <div class="form-group">
+      <label for="exampleGender">Education</label><br>
+      <input type="radio" class="form-control" id="non-graduate">
+      <label for="non-graduate">Non-graduate</label><br>
+      <input type="radio" class="form-control" id="graduate">
+      <label for="graduate">graduate</label><br>
+      <input type="radio" class="form-control" id="phd">
+      <label for="phd">phd</label><br>
+    </div>
+    <div class="form-group">
+      <label for="exampleAge">Mobile Number</label>
+      <input type="number" class="form-control" id="exampleMobileNumber" placeholder="Number">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</body>
+
+</html>
