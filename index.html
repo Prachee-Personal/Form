@@ -6,8 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registration Form</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="shortcut icon" href="./image/favicon.ico">
+  <link rel="stylesheet" href="./style.css">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
 
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -17,82 +19,105 @@
 
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+  <script src="./main.js"></script>
 </head>
 
 <body>
-  <form>
-
-    <div class="form-group">
-      <label for="exampleName">FirstName</label>
-      <input type="text" class="form-control" id="exampleName" placeholder="Enter FirstName">
-    </div>
-    <div class="form-group">
-      <label for="exampleName">LastName</label>
-      <input type="text" class="form-control" id="exampleName" placeholder="Enter LastName">
-    </div>
-    <div class="form-group">
-      <label for="exampleAge">Age</label>
-      <input type="number" class="form-control" id="exampleAge" min="0" max="99" placeholder="Age">
-      <small id="agehelp" class="form-text text-muted">We'll never share your details with anyone else.</small>
-    </div>
-    <div class="form-group">
-      <label for="exampleGender">Gender</label><br>
-      <input type="radio" class="form-control" id="male">
-      <label for="male">Male</label><br>
-      <input type="radio" class="form-control" id="female">
-      <label for="female">Female</label><br>
-      <input type="radio" class="form-control" id="other">
-      <label for="other">Other</label><br>
-    </div>
-    <div class="form-group">
-      <label for="examplePermanentAddress">Permanent Address</label>
-      <textarea type="text" class="form-control" id="exampleAddress" aria-describedby="address"
-        placeholder="Enter Address"></textarea>
-    </div>
-    <div class="form-group">
-      <label for="exampleCurrentAddress">Current Address</label>
-      <textarea type="text" class="form-control" id="exampleAddress" aria-describedby="address"
-        placeholder="Enter Address"></textarea>
-    </div>
-    <div class="form-group">
-      <label for="exampleGender">Location type</label><br>
-      <input type="radio" class="form-control" id="urban">
-      <label for="urban">Urban</label><br>
-      <input type="radio" class="form-control" id="rural">
-      <label for="rural">Rural</label><br>
-      <input type="radio" class="form-control" id="sub-urban">
-      <label for="suburban">Sub-urban</label><br>
-    </div>
-    <div class="form-group">
-      <label for="exampleGender">Education</label><br>
-      <input type="radio" class="form-control" id="non-graduate">
-      <label for="non-graduate">Non-graduate</label><br>
-      <input type="radio" class="form-control" id="graduate">
-      <label for="graduate">graduate</label><br>
-      <input type="radio" class="form-control" id="phd">
-      <label for="phd">phd</label><br>
-    </div>
-    <div class="form-group">
-      <label for="exampleAge">Mobile Number</label>
-      <input type="number" class="form-control" id="exampleMobileNumber" placeholder="Number">
-    </div>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-        placeholder="Enter email">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-    </div>
-    <div class="form-group form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+  <div class="wrapper">
+    <h2>Registration Form</h2><br />
+    <div id="error_message"></div>
+    <form id="myform" class="form" onsubmit="return validation();">
+      <div class="input-field">
+        <label for="exampleName">FirstName</label></br>
+        <input type="text" class="first_name" id="examplefirstName" placeholder="Enter FirstName">
+      </div>
+      <div class="input-field">
+        <label for="exampleName">LastName</label></br>
+        <input type="text" class="last_name" id="examplelastName" placeholder="Enter LastName">
+      </div>
+      <div class="input-field">
+        <label for="exampleAge">Age</label></br>
+        <input type="text" class="age" id="exampleage" placeholder="Enter Age" min="0" max="99">
+      </div>
+      <div class="input-field">
+        <label for="Location">Location:</label><br />
+        <select id="examplelocation" name="location">
+          <option value="location">Select Location</option>
+          <option value="Rural">Rural</option>
+          <option value="Urban">Urban</option>
+          <option value="Suburban">Suburban</option>
+        </select>
+      </div>
+      <div class="input-field">
+        <label for="examplePA">Permanent Address</label></br>
+        <input type="text" class="PermanentAddress" id="examplePA" placeholder="Enter Address">
+      </div>
+      <div class="input-field">
+        <label for="exampleCA">Current Address</label></br>
+        <input type="text" class="CurrentAddress" id="exampleCA" placeholder="Enter Address">
+      </div>
+      <div class="input-field" id="exampleeducation">
+        <p>Education Qualification:</p></br>
+        <input type="radio" id="nongraduate" name="education" value="non-graduate">
+        <label for="nongraduate">Non-graduate</label></br>
+        <input type="radio" id="graduate" name="education" value="graduate">
+        <label for="graduate">graduate</label></br>
+        <input type="radio" id="phd" name="education" value="phd">
+        <label for="phd">phd</label>
+      </div>
+      <div class="input-field">
+        <label for="mobile no">Mobile Number</label></br>
+        <input type="text" class="MobileNumber" id="exampleMobileNumber" placeholder="Mobile Number">
+      </div>
+      <div class="input-field">
+        <label for="email">Enter your email:</label></br>
+        <input type="email" class="Email" id="exampleEmail" placeholder="Enter your email" name="email">
+      </div>
+      <div class="input-field">
+        <label for="Picture">Picture:</label></br>
+        <input type="file" name="myImage" id="examplepicture" accept="image/x-png,image/gif,image/jpeg" />
+      </div>
+      <div class="input-field">
+        <label for="resume">Resume:</label></br>
+        <input type="file" id="exampleresume"
+          accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+      </div>
+      <div class="input-field">
+        <label for="Hobbies/Interests">Hobbies/Interests:</label><br />
+        <select id="hobby" name="hobby">
+          <option value="hobby">Select Please</option>
+          <option value="Singing">Singing</option>
+          <option value="Backing">Backing</option>
+          <option value="Gaming">Gaming</option>
+          <option value="Fitness">Fitness</option>
+        </select>
+      </div>
+      <div class="input-field">
+        <label for="LinkedInlink">LinkedIn Profile Link:</label><br />
+        <input type="url" id="linkedinLink" class="linkedinLink" name="linkedinLink">
+      </div>
+      <div class="input-field" id="exampleskills">
+        <label for="skills">Skills:</label></br>
+        <input type="checkbox" id="skill1" name="skill1" value="coding">
+        <label for="skill1">Coding</label></br>
+        <input type="checkbox" id="skill2" name="skill2" value="management">
+        <label for="skill2">Management</label></br>
+        <input type="checkbox" id="skill3" name="skill3" value="communication">
+        <label for="vehicle3">Communication</label></br>
+      </div>
+      <div class="input-field">
+        <label for="Languages">Languages:</label></br>
+        <select id="examplelanguages" name="language">
+          <option value="language">Select Please</option>
+          <option value="english">English</option>
+          <option value="hindi">Hindi</option>
+          <option value="marathi">Marathi</option>
+      </div>
+      <div class="btn">
+        <input type="submit" value="submit" />
+      </div>
+    </form>
+  </div>
 </body>
 
 </html>
