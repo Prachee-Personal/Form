@@ -26,23 +26,37 @@
   <div class="wrapper">
     <h2>Registration Form</h2><br />
     <div id="error_message"></div>
-    <form id="myform" class="form" onsubmit="return validation();">
+    <form id="myform" class="form" onsubmit="submit()">
       <div class="input-field">
         <label for="exampleName">FirstName</label></br>
-        <input type="text" class="first_name" id="examplefirstName" placeholder="Enter FirstName">
+        <input type="text" onkeyup="validateFields(id,event)" class="first_name" 
+        id="examplefirstName" required minlength="3" maxlength="12 " placeholder="Enter FirstName">
       </div>
       <div class="input-field">
         <label for="exampleName">LastName</label></br>
-        <input type="text" class="last_name" id="examplelastName" placeholder="Enter LastName">
+        <input type="text" onkeyup="validateFields(id,event)" class="last_name" 
+        id="examplelastName" required minlength="3" maxlength="12 " placeholder="Enter LastName">
       </div>
       <div class="input-field">
         <label for="exampleAge">Age</label></br>
-        <input type="text" class="age" id="exampleage" placeholder="Enter Age" min="0" max="99">
+        <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+         onkeyup="validateFields(id,event)" class="age" id="exampleage" placeholder="Enter Age" required minlength = "1" maxlength = "2">
+      </div>
+      <div class="input-field" id="examplegender">
+        <p>Gender:</p></br>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label></br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label></br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label></br>
+        <input type="radio" id="do not want to disclose" name="gender" value="do not want to disclose">
+        <label for="do not want to disclose">Do Not Want To Disclose</label></br>
       </div>
       <div class="input-field">
-        <label for="Location">Location:</label><br />
-        <select id="examplelocation" name="location">
-          <option value="location">Select Location</option>
+        <label for="location">Location:</label><br />
+        <select id="location" name="location" required>
+          <option value="">Select Please</option>
           <option value="Rural">Rural</option>
           <option value="Urban">Urban</option>
           <option value="Suburban">Suburban</option>
@@ -53,12 +67,14 @@
         <input type="text" class="PermanentAddress" id="examplePA" placeholder="Enter Address">
       </div>
       <div class="input-field">
+        <input type="checkbox" id="sameAddress" name="sameAddress" value="addressCheckbox" onchange="checkIfAddressIsSameAsPermanent(id)">
+        <label for="skill1">same as the permanent address</label></br>
         <label for="exampleCA">Current Address</label></br>
         <input type="text" class="CurrentAddress" id="exampleCA" placeholder="Enter Address">
       </div>
       <div class="input-field" id="exampleeducation">
         <p>Education Qualification:</p></br>
-        <input type="radio" id="nongraduate" name="education" value="non-graduate">
+        <input type="radio" id="nongraduate" name="education" value="non-graduate" required >
         <label for="nongraduate">Non-graduate</label></br>
         <input type="radio" id="graduate" name="education" value="graduate">
         <label for="graduate">graduate</label></br>
@@ -67,25 +83,28 @@
       </div>
       <div class="input-field">
         <label for="mobile no">Mobile Number</label></br>
-        <input type="text" class="MobileNumber" id="exampleMobileNumber" placeholder="Mobile Number">
+        <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+         onkeyup="validateFields(id,event)" class="MobileNumber" id="exampleMobileNumber" required minlength="10" maxlength="10" placeholder="Mobile Number">
       </div>
       <div class="input-field">
         <label for="email">Enter your email:</label></br>
-        <input type="email" class="Email" id="exampleEmail" placeholder="Enter your email" name="email">
+        <input type="email" onkeyup="validateFields(id,event)" required
+        class="Email" id="exampleEmail" placeholder="Enter your email" name="email">
       </div>
       <div class="input-field">
         <label for="Picture">Picture:</label></br>
-        <input type="file" name="myImage" id="examplepicture" accept="image/x-png,image/gif,image/jpeg" />
+        <input type="file" onchange="validateFileUpload(id)" required name="myImage" id="examplepicture" accept="image/gif, image/jpeg, image/png"/>
       </div>
       <div class="input-field">
         <label for="resume">Resume:</label></br>
-        <input type="file" id="exampleresume"
-          accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+        <input type="file" onchange="validateFileUpload(id)" required id="exampleresume"
+          accept="application/ms-word, application/vnd.ms-excel, application/vnd.ms-powerpoint,
+          text/plain, application/pdf">
       </div>
       <div class="input-field">
         <label for="Hobbies/Interests">Hobbies/Interests:</label><br />
-        <select id="hobby" name="hobby">
-          <option value="hobby">Select Please</option>
+        <select id="hobby" name="hobby" required="required">
+          <option value="">select Please</option>
           <option value="Singing">Singing</option>
           <option value="Backing">Backing</option>
           <option value="Gaming">Gaming</option>
@@ -94,10 +113,10 @@
       </div>
       <div class="input-field">
         <label for="LinkedInlink">LinkedIn Profile Link:</label><br />
-        <input type="url" id="linkedinLink" class="linkedinLink" name="linkedinLink">
+        <input type="url" id="linkedinLink" required  class="linkedinLink" name="linkedinLink">
       </div>
       <div class="input-field" id="exampleskills">
-        <label for="skills">Skills:</label></br>
+        <label for="skills" required="required">Skills:</label></br>
         <input type="checkbox" id="skill1" name="skill1" value="coding">
         <label for="skill1">Coding</label></br>
         <input type="checkbox" id="skill2" name="skill2" value="management">
@@ -107,13 +126,13 @@
       </div>
       <div class="input-field">
         <label for="Languages">Languages:</label></br>
-        <select id="examplelanguages" name="language">
-          <option value="language">Select Please</option>
+        <select id="examplelanguages" name="language" required="required">
+          <option value="">Select Please</option>
           <option value="english">English</option>
           <option value="hindi">Hindi</option>
           <option value="marathi">Marathi</option>
       </div>
-      <div class="btn">
+      <div class="input-field">
         <input type="submit" value="submit" />
       </div>
     </form>
