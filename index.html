@@ -19,14 +19,14 @@
 
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="./main.js"></script>
+  <!-- <script src="./main.js"></script> -->
 </head>
 
 <body>
   <div class="wrapper">
     <h2 class="page-header">Registration Form</h2><br />
     <div id="error_message"></div>
-    <form id="myform" class="form" onsubmit="submit()">
+    <form id="myform" class="form">
       <div class="input-field">
         <label for="exampleName">First Name</label> <span class="required">*</span></br>
         <input type="text" onkeyup="validateFields(id,event)" class="first_name" 
@@ -84,7 +84,7 @@
       </div>
       <div class="input-field">
         <label for="mobile no">Mobile Number</label> <span class="required">*</span>
-        <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+        <input type="text" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
          onkeyup="validateFields(id,event)" class="MobileNumber" id="exampleMobileNumber" required minlength="10" maxlength="10" placeholder="Mobile Number">
       </div>
       <div class="input-field">
@@ -104,7 +104,7 @@
       </div>
       <div class="input-field">
         <label for="Hobbies/Interests">Hobbies/Interests: <span class="required">*</span></label><br />
-        <select id="hobby" name="hobby" required="required">
+        <select id="hobby" name="hobby" required="required" multiple>
           <option value="">select Please</option>
           <option value="Singing">Singing</option>
           <option value="Backing">Backing</option>
@@ -127,17 +127,18 @@
       </div>
       <div class="input-field">
         <label for="Languages">Languages:</label> <span class="required">*</span></br>
-        <select id="examplelanguages" name="language" required="required">
+        <select id="examplelanguages" name="language" required="required" multiple>
           <option value="">Select Please</option>
           <option value="english">English</option>
           <option value="hindi">Hindi</option>
           <option value="marathi">Marathi</option>
           </select>
       </div>
-      <input type="submit" class="btn" value="Submit">
+      <!-- <input type="button" class="btn" value="Submit"> -->
+      <button class=" btn">Submit</button>
     </form>
   </div>
-  
+  <script src="./main.js"></script>
 </body>
 
 </html>
