@@ -11,19 +11,15 @@ body {
     background:#FFEEBB;
     
 }
-/* .wrapper{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    min-height: 100%;
-    max-width: 450px;
-    width: 100%;
-    background-color:wheat;
-    padding:25px;
-    border-radius: 10px;
-    box-shadow: 4px 4px 2px burlywood;
-} */
+
+.required{
+    color:red;
+}
+
+.form{
+    padding: 10px;
+}
+
 .wrapper{
     position: absolute;
     left: 35%;
@@ -36,6 +32,32 @@ body {
     box-shadow: 4px 4px 2px burlywood;
 }
 
+.page-header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 450px;
+    width: 100%;
+    background-color:white;
+    border-radius: 5px;
+    box-shadow: 4px 4px 2px 1px grey;
+    margin-bottom:5px;
+}
+
+.btn{
+    margin-top: 10px;
+    background-color:blue;
+    color:white;
+    padding:10px;
+    border-radius:5px;
+    font-weight: bold;
+    text-transform:capitalize;  
+}
+
+.btn:hover{
+    color:lightblue;
+}
+
 .input-field{
     max-width: 450px;
     width: 100%;
@@ -45,12 +67,13 @@ body {
     box-shadow: 4px 4px 2px 1px grey;
     margin-bottom:10px;
 }
+
 .first_name, .last_name, .age,
 .PermanentAddress, .CurrentAddress, .MobileNumber, .Email, .linkedinLink{
     border: 0;
     outline: 0;
-    border-bottom: 1px solid #e0e0e0;
-    width: 100%;
+    border-bottom: 1px solid #d62222;
+    width: 80%;
 }
 .wrapper #error_message{
     margin-bottom:20px;
