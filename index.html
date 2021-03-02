@@ -40,7 +40,7 @@
       <div class="input-field">
         <label for="exampleAge">Age</label> <span class="required">*</span></br>
         <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-         onkeyup="validateFields(id,event)" class="age" id="exampleage" placeholder="Enter Age" required minlength = "1" maxlength = "2">
+         onkeyup="validateFields(id,event)" class="age" id="exampleage" min="1" max="99"placeholder="Enter Age" required minlength = "1" maxlength = "2">
       </div>
       <div class="input-field" id="examplegender">
         <p>Gender: <span class="required">*</span></br></p>
@@ -78,9 +78,9 @@
         <input type="radio" id="nongraduate" name="education" value="non-graduate" required >
         <label for="nongraduate">Non-graduate</label></br>
         <input type="radio" id="graduate" name="education" value="graduate">
-        <label for="graduate">graduate</label></br>
+        <label for="graduate">Graduate</label></br>
         <input type="radio" id="phd" name="education" value="phd">
-        <label for="phd">phd</label>
+        <label for="phd">Phd</label>
       </div>
       <div class="input-field">
         <label for="mobile no">Mobile Number</label> <span class="required">*</span>
