@@ -26,7 +26,7 @@
   <div class="wrapper">
     <h2 class="page-header">Registration Form</h2><br />
     <div id="error_message"></div>
-    <form id="myform" class="form">
+    <form id="myform" class="form" autocomplete="off">
       <div class="input-field">
         <label for="exampleName">First Name</label> <span class="required">*</span></br>
         <input type="text" onkeyup="validateFields(id,event)" class="first_name" id="examplefirstName" required
@@ -50,10 +50,14 @@
         <label for="male">Male</label></br>
         <input type="radio" id="female" name="gender" value="female">
         <label for="female">Female</label></br>
-        <input type="radio" id="other" name="gender" value="other">
-        <label for="other">Other</label></br>
         <input type="radio" id="do not want to disclose" name="gender" value="do not want to disclose">
         <label for="do not want to disclose">Do Not Want To Disclose</label></br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label></br>
+        </br>
+        <input type="text" id="other-option-text" class="other-option-text" name="gender"
+          placeholder='Your Answer Please'>
+
       </div>
       <div class="input-field">
         <label for="location">Location:</label> <span class="required">*</span></br>
@@ -83,7 +87,12 @@
         <input type="radio" id="graduate" name="education" value="graduate">
         <label for="graduate">Graduate</label></br>
         <input type="radio" id="phd" name="education" value="phd">
-        <label for="phd">Phd</label>
+        <label for="phd">Phd</label></br>
+        <input type="radio" id="other" name="education" value="other">
+        <label for="other">Other</label></br>
+        <br />
+        <input type="text" id="other-option-education" class="other-option-education" name="education" value=""
+          placeholder='Your Answer Please'>
       </div>
       <div class="input-field">
         <label for="mobile no">Mobile Number</label> <span class="required">*</span>
@@ -110,7 +119,7 @@
       <div class="input-field">
         <label for="Hobbies/Interests">Hobbies/Interests: <span class="required">*</span></label><br />
         <select id="hobby" name="hobby" required="required" multiple>
-          <option value="">select Please</option>
+          <option value="">Select Please</option>
           <option value="Singing">Singing</option>
           <option value="Backing">Backing</option>
           <option value="Gaming">Gaming</option>

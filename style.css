@@ -78,12 +78,15 @@ body {
 .CurrentAddress,
 .MobileNumber,
 .Email,
-.linkedinLink {
+.linkedinLink,
+.other-option-text,
+.other-option-education {
   border: 0;
   outline: 0;
   border-bottom: 1px solid #d62222;
   width: 80%;
 }
+
 /* .wrapper #error_message{
     margin-bottom:20px;
     padding:0px;
