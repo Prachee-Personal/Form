@@ -85,7 +85,7 @@ function validateFileUpload(fieldId) {
 function checkIfAddressIsSameAsPermanent(fieldId) {
     if (document.getElementById(fieldId).checked) {
         ((document.getElementById('exampleCA').value = document.getElementById('examplePA').value) && (document.getElementById('exampleCA').disabled = true));
-    }else {
+    } else {
         (document.getElementById('exampleCA').disabled = false);
     }
 }
