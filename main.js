@@ -9,11 +9,14 @@ var resume = document.getElementById("exampleresume");
 var hobby = document.getElementById("hobby");
 var skill = document.getElementById("exampleskills");
 var registrationForm = document.getElementById("myform");
- registrationForm.addEventListener("submit", (event) => {
-//     console.log("yaha");
-//     event.preventDefault();
-     submit();
- });
+
+registrationForm.addEventListener("submit", (event) => {
+    //     console.log("yaha");
+    //     event.preventDefault();
+    submit();
+    alert('sucesssfully Registered!')
+
+});
 
 
 function validateFields(fieldId) {
@@ -36,9 +39,9 @@ function validateFormValues() {
 
     var onlyInidanMobileRegex = /^[6-9]\d{9}$/;
     // alert(onlyInidanMobileRegex)
-    console.log("The length of mobile is " +mobilenumber.value.length);
-    console.log("(mobilenumber.value.length != 10)",(mobilenumber.value.length != 10));
-    console.log("(onlyInidanMobileRegex.test(mobilenumber.value))",(onlyInidanMobileRegex.test(mobilenumber.value)))
+    console.log("The length of mobile is " + mobilenumber.value.length);
+    console.log("(mobilenumber.value.length != 10)", (mobilenumber.value.length != 10));
+    console.log("(onlyInidanMobileRegex.test(mobilenumber.value))", (onlyInidanMobileRegex.test(mobilenumber.value)))
     if ((mobilenumber.value.length != 10) || !(onlyInidanMobileRegex.test(mobilenumber.value))) {
         mobilenumber.focus();
         return `Please enter a valid mobile number that begins with either numbers that is 6,7,8 or 9,
@@ -82,6 +85,8 @@ function validateFileUpload(fieldId) {
 function checkIfAddressIsSameAsPermanent(fieldId) {
     if (document.getElementById(fieldId).checked) {
         ((document.getElementById('exampleCA').value = document.getElementById('examplePA').value) && (document.getElementById('exampleCA').disabled = true));
+    }else {
+        (document.getElementById('exampleCA').disabled = false);
     }
 }
 

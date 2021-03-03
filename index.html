@@ -29,18 +29,20 @@
     <form id="myform" class="form">
       <div class="input-field">
         <label for="exampleName">First Name</label> <span class="required">*</span></br>
-        <input type="text" onkeyup="validateFields(id,event)" class="first_name" 
-        id="examplefirstName" required minlength="3" maxlength="12 " placeholder="Enter FirstName">
+        <input type="text" onkeyup="validateFields(id,event)" class="first_name" id="examplefirstName" required
+          minlength="3" maxlength="12 " placeholder="Enter FirstName">
       </div>
       <div class="input-field">
         <label for="exampleName">Last Name</label> <span class="required">*</span></br>
-        <input type="text" onkeyup="validateFields(id,event)" class="last_name" 
-        id="examplelastName" required minlength="3" maxlength="12 " placeholder="Enter LastName">
+        <input type="text" onkeyup="validateFields(id,event)" class="last_name" id="examplelastName" required
+          minlength="3" maxlength="12 " placeholder="Enter LastName">
       </div>
       <div class="input-field">
         <label for="exampleAge">Age</label> <span class="required">*</span></br>
-        <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-         onkeyup="validateFields(id,event)" class="age" id="exampleage" min="1" max="99"placeholder="Enter Age" required minlength = "1" maxlength = "2">
+        <input type="number"
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          onkeyup="validateFields(id,event)" class="age" id="exampleage" min="1" max="99" placeholder="Enter Age"
+          required minlength="1" maxlength="2">
       </div>
       <div class="input-field" id="examplegender">
         <p>Gender: <span class="required">*</span></br></p>
@@ -67,15 +69,16 @@
         <input type="text" class="PermanentAddress" id="examplePA" placeholder="Enter Address">
       </div>
       <div class="input-field">
-        <input type="checkbox" id="sameAddress" name="sameAddress" value="addressCheckbox" onchange="checkIfAddressIsSameAsPermanent(id)">
+        <input type="checkbox" id="sameAddress" name="sameAddress" value="addressCheckbox"
+          onchange="checkIfAddressIsSameAsPermanent(id)">
         <label for="skill1">Same as above</label></br>
-        <br/>
+        <br />
         <label for="exampleCA">Current Address</label></br>
         <input type="text" class="CurrentAddress" id="exampleCA" placeholder="Enter Address">
       </div>
       <div class="input-field" id="exampleeducation">
         <p>Education Qualification: <span class="required">*</span></p></br>
-        <input type="radio" id="nongraduate" name="education" value="non-graduate" required >
+        <input type="radio" id="nongraduate" name="education" value="non-graduate" required>
         <label for="nongraduate">Non-graduate</label></br>
         <input type="radio" id="graduate" name="education" value="graduate">
         <label for="graduate">Graduate</label></br>
@@ -84,22 +87,24 @@
       </div>
       <div class="input-field">
         <label for="mobile no">Mobile Number</label> <span class="required">*</span>
-        <input type="text" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-         onkeyup="validateFields(id,event)" class="MobileNumber" id="exampleMobileNumber" required minlength="10" maxlength="10" placeholder="Mobile Number">
+        <input type="text"
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          onkeyup="validateFields(id,event)" class="MobileNumber" id="exampleMobileNumber" required minlength="10"
+          maxlength="10" placeholder="Mobile Number">
       </div>
       <div class="input-field">
         <label for="email">Email Please:</label> <span class="required">*</span>
-        <input type="email" onkeyup="validateFields(id,event)" required
-        class="Email" id="exampleEmail" placeholder="Enter your email" name="email">
+        <input type="email" onkeyup="validateFields(id,event)" required class="Email" id="exampleEmail"
+          placeholder="Enter your email" name="email">
       </div>
       <div class="input-field">
         <label for="Picture">Picture:</label> <span class="required">*</span></br>
-        <input type="file" onchange="validateFileUpload(id)" required name="myImage" id="examplepicture" accept="image/gif, image/jpeg, image/png"/>
+        <input type="file" onchange="validateFileUpload(id)" required name="myImage" id="examplepicture"
+          accept="image/gif, image/jpeg, image/png" />
       </div>
       <div class="input-field">
         <label for="resume">Resume:</label> <span class="required">*</span></br>
-        <input type="file" onchange="validateFileUpload(id)" required id="exampleresume"
-          accept="application/ms-word, application/vnd.ms-excel, application/vnd.ms-powerpoint,
+        <input type="file" onchange="validateFileUpload(id)" required id="exampleresume" accept="application/ms-word, application/vnd.ms-excel, application/vnd.ms-powerpoint,
           text/plain, application/pdf">
       </div>
       <div class="input-field">
@@ -114,7 +119,7 @@
       </div>
       <div class="input-field">
         <label for="LinkedInlink">LinkedIn Profile Link:</label> <span class="required">*</span></br>
-        <input type="url" id="linkedinLink" required  class="linkedinLink" name="linkedinLink" placeholder="Link Please">
+        <input type="url" id="linkedinLink" required class="linkedinLink" name="linkedinLink" placeholder="Link Please">
       </div>
       <div class="input-field" id="exampleskills">
         <label for="skills" required="required">Skills:</label> <span class="required">*</span></br>
@@ -132,7 +137,7 @@
           <option value="english">English</option>
           <option value="hindi">Hindi</option>
           <option value="marathi">Marathi</option>
-          </select>
+        </select>
       </div>
       <!-- <input type="button" class="btn" value="Submit"> -->
       <button class=" btn">Submit</button>

@@ -1,83 +1,88 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    font-family: sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: sans-serif;
 }
 
 body {
-    /* background:#FFEEBB; */
-    background-color: #ff7700;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23cc0000' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23aa0000' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23d6002b' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23b10022' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23d9004b' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23b2003d' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23d3006c' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ac0057' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23c4008c' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%239e0071' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23aa00aa' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23880088' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
-    background-attachment: fixed;
-    background-size: cover;
-    
+  /* background:#FFEEBB; */
+  background-color: #ff7700;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23cc0000' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23aa0000' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23d6002b' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23b10022' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23d9004b' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23b2003d' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23d3006c' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ac0057' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23c4008c' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%239e0071' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23aa00aa' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23880088' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-.required{
-    color:red;
+.required {
+  color: red;
 }
 
-.form{
-    padding: 10px;
+.form {
+  padding: 10px;
 }
 
-.wrapper{
-    position: absolute;
-    left: 35%;
-    height:fit-content;
-    max-width: 450px;
-    width: 100%;
-    background-color:#ffbe0f;
-    padding:25px;
-    border-radius: 10px;
-    box-shadow: 4px 4px 2px burlywood;
+.wrapper {
+  position: absolute;
+  left: 35%;
+  height: fit-content;
+  max-width: 450px;
+  width: 100%;
+  background-color: #ffbe0f;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 2px burlywood;
 }
 
-.page-header{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 450px;
-    width: 100%;
-    background-color:white;
-    border-radius: 5px;
-    box-shadow: 4px 4px 2px 1px grey;
-    margin-bottom:5px;
+.page-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 450px;
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 4px 4px 2px 1px grey;
+  margin-bottom: 5px;
 }
 
-.btn{
-    margin-top: 10px;
-    background-color:blue;
-    color:white;
-    padding:10px;
-    border-radius:5px;
-    font-weight: bold;
-    text-transform:capitalize;  
+.btn {
+  margin-top: 10px;
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: capitalize;
 }
 
-.btn:hover{
-    color:lightblue;
+.btn:hover {
+  color: lightblue;
 }
 
-.input-field{
-    max-width: 450px;
-    width: 100%;
-    background-color:white;
-    padding:25px;
-    border-radius: 10px;
-    box-shadow: 4px 4px 2px 1px grey;
-    margin-bottom:10px;
+.input-field {
+  max-width: 450px;
+  width: 100%;
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 2px 1px grey;
+  margin-bottom: 10px;
 }
 
-.first_name, .last_name, .age,
-.PermanentAddress, .CurrentAddress, .MobileNumber, .Email, .linkedinLink{
-    border: 0;
-    outline: 0;
-    border-bottom: 1px solid #d62222;
-    width: 80%;
+.first_name,
+.last_name,
+.age,
+.PermanentAddress,
+.CurrentAddress,
+.MobileNumber,
+.Email,
+.linkedinLink {
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #d62222;
+  width: 80%;
 }
 /* .wrapper #error_message{
     margin-bottom:20px;
