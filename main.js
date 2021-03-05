@@ -9,12 +9,14 @@ var resume = document.getElementById("exampleresume");
 var hobby = document.getElementById("hobby");
 var skill = document.getElementById("exampleskills");
 var registrationForm = document.getElementById("myform");
+var textfieldotheroption = document.getElementById("other-option-text")
 
 registrationForm.addEventListener("submit", (event) => {
-    //     console.log("yaha");
-    //     event.preventDefault();
-    submit();
-    alert('sucesssfully Registered!')
+    if (submit()) {
+        alert('sucesssfully Registered!')
+    } else {
+        event.preventDefault();
+    }
 
 });
 
@@ -38,7 +40,6 @@ function validateFields(fieldId) {
 function validateFormValues() {
 
     var onlyInidanMobileRegex = /^[6-9]\d{9}$/;
-    // alert(onlyInidanMobileRegex)
     console.log("The length of mobile is " + mobilenumber.value.length);
     console.log("(mobilenumber.value.length != 10)", (mobilenumber.value.length != 10));
     console.log("(onlyInidanMobileRegex.test(mobilenumber.value))", (onlyInidanMobileRegex.test(mobilenumber.value)))
@@ -91,12 +92,10 @@ function checkIfAddressIsSameAsPermanent(fieldId) {
 }
 
 function submit() {
-    // alert("I am here in submit");
-    console.log("I am here in submit")
     var validationErrorMessage = validateFormValues();
     if (validationErrorMessage.length > 0) {
         alert(validationErrorMessage);
-        return;
+        return false;
     }
-    return false;
+    return true;
 }
