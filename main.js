@@ -9,7 +9,8 @@ var resume = document.getElementById("exampleresume");
 var hobby = document.getElementById("hobby");
 var skill = document.getElementById("exampleskills");
 var registrationForm = document.getElementById("myform");
-var textfieldotheroption = document.getElementById("other-option-text")
+
+
 
 registrationForm.addEventListener("submit", (event) => {
     if (submit()) {
